@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #222;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.h2logo {
+    /* color: white; */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links:hover {
+    color: #00bfff;
+}
+
+.logo  {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #1f2937, #111827);
+    /* background-color: rgb(204, 204, 204); */
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #d1d5db;
+}
+
+.hero-btn {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* card components css  */
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 20px;
+    gap: 20px;
+    line-height: 2em;
+}
+
+.book-img{
+    height: 300px;
+    align-items: center;
+    width: auto;
+}
+
+.img-container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+.card {
+    padding: 20px;
+    background-color:rgb(223, 223, 223);
+    border-radius: 20px;
+}
+
+.load-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.load-btn:hover {
+    /* border: 2px solid white; */
+    border: none;
+}
+
+.book-detail {
+    padding-top: 10px;
+}
+
+/* end */
+
+.book-section {
+    padding: 30px;
+}
+
+.book-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Left Sidebar */
+
+.filter-wrapper {
+    width: 250px;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+}
+
+/* Right Side */
+
+.books-wrapper {
+    flex: 1;
+}
+
+/* Books Grid */
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Card  css start */
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.book-img {
+    width: 180px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.card:hover {
+    transform: rotateX('10');
+}
+
+/* Card  css end */
+
