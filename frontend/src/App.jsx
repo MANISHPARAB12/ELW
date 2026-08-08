@@ -1,6 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , Navigate} from "react-router-dom";
 
 import {Navbar} from './Components/Navbar'
+import {ProductDetails} from "./Components/ProductDetails"
+import { Card } from "./Components/Card";
 
 import { Home } from "./Pages/Home";
 import { MyBorrow } from "./Pages/MyBorrow";
@@ -13,10 +15,14 @@ export const  App = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/MyBorrow" element={<MyBorrow />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Contact" element={<Contact />} />
+
+        <Route path="/" element={<Card />} />
+        <Route path="/book/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );

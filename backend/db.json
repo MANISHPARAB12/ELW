@@ -5,96 +5,96 @@
       "title": "Clean Code",
       "author": "Robert C. Martin",
       "category": "Programming",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/cleancode.jpg",
-      "description": "Clean Code by Robert C. Martin."
+      "description": "This programming book provides practical knowledge, coding techniques, and software development best practices. It explains important concepts with real-world examples, improves problem-solving skills, and helps developers write clean, maintainable, and efficient code. Suitable for beginners and experienced programmers alike. A valuable resource for mastering modern software development."
     },
     {
       "id": 2,
       "title": "The Pragmatic Programmer",
       "author": "Andrew Hunt & David Thomas",
       "category": "Programming",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ThePragmaticProgrammer.jpg",
-      "description": "The Pragmatic Programmer by Andrew Hunt & David Thomas."
+      "description": "This programming book provides practical knowledge, coding techniques, and software development best practices. It explains important concepts with real-world examples, improves problem-solving skills, and helps developers write clean, maintainable, and efficient code. Suitable for beginners and experienced programmers alike. A valuable resource for mastering modern software development."
     },
     {
       "id": 3,
       "title": "Designing Data-Intensive Applications",
       "author": "Martin Kleppmann",
       "category": "Programming",
-      "price": 1199,
+      "price": "30 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/Designing%20Data-IntensiveApplications.jpg",
-      "description": "Designing Data-Intensive Applications by Martin Kleppmann."
+      "description": "This programming book provides practical knowledge, coding techniques, and software development best practices. It explains important concepts with real-world examples, improves problem-solving skills, and helps developers write clean, maintainable, and efficient code. Suitable for beginners and experienced programmers alike. A valuable resource for mastering modern software development."
     },
     {
       "id": 4,
       "title": "You Don't Know JS Yet",
       "author": "Kyle Simpson",
       "category": "Programming",
-      "price": 699,
+      "price": "15 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/YouDon'tKnowJSYet.jpg",
-      "description": "You Don't Know JS Yet by Kyle Simpson."
+      "description": "This programming book provides practical knowledge, coding techniques, and software development best practices. It explains important concepts with real-world examples, improves problem-solving skills, and helps developers write clean, maintainable, and efficient code. Suitable for beginners and experienced programmers alike. A valuable resource for mastering modern software development."
     },
     {
       "id": 5,
       "title": "Learning React",
       "author": "Alex Banks & Eve Porcello",
       "category": "Programming",
-      "price": 999,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/LearningReact.jpg",
-      "description": "Learning React by Alex Banks & Eve Porcello."
+      "description": "This programming book provides practical knowledge, coding techniques, and software development best practices. It explains important concepts with real-world examples, improves problem-solving skills, and helps developers write clean, maintainable, and efficient code. Suitable for beginners and experienced programmers alike. A valuable resource for mastering modern software development."
     },
     {
       "id": 6,
       "title": "Sapiens",
       "author": "Yuval Noah Harari",
       "category": "History",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/Sapiens.jpg",
-      "description": "Sapiens by Yuval Noah Harari."
+      "description": "This history book explores important civilizations, historical events, and influential leaders that shaped the modern world. It presents well-researched information with engaging storytelling and historical analysis. Readers gain a deeper understanding of cultures, societies, and global events. An excellent choice for history enthusiasts and students."
     },
     {
       "id": 7,
       "title": "The Silk Roads",
       "author": "Peter Frankopan",
       "category": "History",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/TheSilkRoads.jpg",
-      "description": "The Silk Roads by Peter Frankopan."
+      "description": "This history book explores important civilizations, historical events, and influential leaders that shaped the modern world. It presents well-researched information with engaging storytelling and historical analysis. Readers gain a deeper understanding of cultures, societies, and global events. An excellent choice for history enthusiasts and students."
     },
     {
       "id": 8,
       "title": "Guns, Germs, and Steel",
       "author": "Jared Diamond",
       "category": "History",
-      "price": 950,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/GunsGermsandSteel.jpg",
-      "description": "Guns, Germs, and Steel by Jared Diamond."
+      "description": "This history book explores important civilizations, historical events, and influential leaders that shaped the modern world. It presents well-researched information with engaging storytelling and historical analysis. Readers gain a deeper understanding of cultures, societies, and global events. An excellent choice for history enthusiasts and students."
     },
     {
       "id": 9,
@@ -106,259 +106,259 @@
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/TheHistoryoftheAncientWorld.jpg",
-      "description": "The History of the Ancient World by Susan Wise Bauer."
+      "description": "This history book explores important civilizations, historical events, and influential leaders that shaped the modern world. It presents well-researched information with engaging storytelling and historical analysis. Readers gain a deeper understanding of cultures, societies, and global events. An excellent choice for history enthusiasts and students."
     },
     {
       "id": 10,
       "title": "A People's History of the United States",
       "author": "Howard Zinn",
       "category": "History",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/APeople'sHistoryoftheUnitedStates.jpg",
-      "description": "A People's History of the United States by Howard Zinn."
+      "description": "This history book explores important civilizations, historical events, and influential leaders that shaped the modern world. It presents well-researched information with engaging storytelling and historical analysis. Readers gain a deeper understanding of cultures, societies, and global events. An excellent choice for history enthusiasts and students."
     },
     {
       "id": 11,
       "title": "Prisoners of Geography",
       "author": "Tim Marshall",
       "category": "Geography",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/PrisonersofGeography.jpg",
-      "description": "Prisoners of Geography by Tim Marshall."
+      "description": "This geography book explains the Earth's physical features, countries, climates, and human geography in an easy-to-understand way. It includes real-world examples, maps, and geographical concepts that improve knowledge about our planet. Ideal for students, travelers, and anyone interested in geography."
     },
     {
       "id": 12,
       "title": "The Power of Geography",
       "author": "Tim Marshall",
       "category": "Geography",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ThePowerofGeography.jpg",
-      "description": "The Power of Geography by Tim Marshall."
+      "description": "This geography book explains the Earth's physical features, countries, climates, and human geography in an easy-to-understand way. It includes real-world examples, maps, and geographical concepts that improve knowledge about our planet. Ideal for students, travelers, and anyone interested in geography."
     },
     {
       "id": 13,
       "title": "National Geographic Atlas of the World",
       "author": "National Geographic",
       "category": "Geography",
-      "price": 1599,
+      "price": "10 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/NationalGeographicAtlasoftheWorld.jpg",
-      "description": "National Geographic Atlas of the World by National Geographic."
+      "description": "This geography book explains the Earth's physical features, countries, climates, and human geography in an easy-to-understand way. It includes real-world examples, maps, and geographical concepts that improve knowledge about our planet. Ideal for students, travelers, and anyone interested in geography."
     },
     {
       "id": 14,
       "title": "Geography: A Very Short Introduction",
       "author": "John A. Matthews",
       "category": "Geography",
-      "price": 499,
+      "price": "10 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/GeographyAVeryShortIntroduction.jpg",
-      "description": "Geography: A Very Short Introduction by John A. Matthews."
+      "description": "This geography book explains the Earth's physical features, countries, climates, and human geography in an easy-to-understand way. It includes real-world examples, maps, and geographical concepts that improve knowledge about our planet. Ideal for students, travelers, and anyone interested in geography."
     },
     {
       "id": 15,
       "title": "Physical Geography",
       "author": "James Petersen",
       "category": "Geography",
-      "price": 1199,
+      "price": "30 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/PhysicalGeography.jpg",
-      "description": "Physical Geography by James Petersen."
+      "description": "This geography book explains the Earth's physical features, countries, climates, and human geography in an easy-to-understand way. It includes real-world examples, maps, and geographical concepts that improve knowledge about our planet. Ideal for students, travelers, and anyone interested in geography."
     },
     {
       "id": 16,
       "title": "The Lean Startup",
       "author": "Eric Ries",
       "category": "Business",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/TheLeanStartup.jpg",
-      "description": "The Lean Startup by Eric Ries."
+      "description": "This business book covers entrepreneurship, leadership, management, and growth strategies used by successful companies. It offers practical advice, real-world case studies, and decision-making techniques to improve business skills. Perfect for entrepreneurs, professionals, and business students."
     },
     {
       "id": 17,
       "title": "Zero to One",
       "author": "Peter Thiel",
       "category": "Business",
-      "price": 699,
+      "price": "15 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ZerotoOne.jpg",
-      "description": "Zero to One by Peter Thiel."
+      "description": "This business book covers entrepreneurship, leadership, management, and growth strategies used by successful companies. It offers practical advice, real-world case studies, and decision-making techniques to improve business skills. Perfect for entrepreneurs, professionals, and business students."
     },
     {
       "id": 18,
       "title": "Good to Great",
       "author": "Jim Collins",
       "category": "Business",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/GoodtoGreat.jpg",
-      "description": "Good to Great by Jim Collins."
+      "description": "This business book covers entrepreneurship, leadership, management, and growth strategies used by successful companies. It offers practical advice, real-world case studies, and decision-making techniques to improve business skills. Perfect for entrepreneurs, professionals, and business students."
     },
     {
       "id": 19,
       "title": "Blue Ocean Strategy",
       "author": "W. Chan Kim",
       "category": "Business",
-      "price": 950,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/BlueOceanStrategy.jpg",
-      "description": "Blue Ocean Strategy by W. Chan Kim."
+      "description": "This business book covers entrepreneurship, leadership, management, and growth strategies used by successful companies. It offers practical advice, real-world case studies, and decision-making techniques to improve business skills. Perfect for entrepreneurs, professionals, and business students."
     },
     {
       "id": 20,
       "title": "The Personal MBA",
       "author": "Josh Kaufman",
       "category": "Business",
-      "price": 999,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ThePersonalMBA.jpg",
-      "description": "The Personal MBA by Josh Kaufman."
+      "description": "This business book covers entrepreneurship, leadership, management, and growth strategies used by successful companies. It offers practical advice, real-world case studies, and decision-making techniques to improve business skills. Perfect for entrepreneurs, professionals, and business students."
     },
     {
       "id": 21,
       "title": "Atomic Habits",
       "author": "James Clear",
       "category": "Motivational",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/AtomicHabits.jpg",
-      "description": "Atomic Habits by James Clear."
+      "description": "This motivational book focuses on building positive habits, improving mindset, and achieving long-term success. It shares inspiring stories, practical techniques, and actionable advice for personal growth. A great read for anyone looking to develop confidence, discipline, and better daily habits."
     },
     {
       "id": 22,
       "title": "The 7 Habits of Highly Effective People",
       "author": "Stephen R. Covey",
       "category": "Motivational",
-      "price": 850,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/The7HabitsofHighlyEffectivePeople.jpg",
-      "description": "The 7 Habits of Highly Effective People by Stephen R. Covey."
+      "description": "This motivational book focuses on building positive habits, improving mindset, and achieving long-term success. It shares inspiring stories, practical techniques, and actionable advice for personal growth. A great read for anyone looking to develop confidence, discipline, and better daily habits."
     },
     {
       "id": 23,
       "title": "Think and Grow Rich",
       "author": "Napoleon Hill",
       "category": "Motivational",
-      "price": 599,
+      "price": "10 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ThinkandGrowRich.jpg",
-      "description": "Think and Grow Rich by Napoleon Hill."
+      "description": "This motivational book focuses on building positive habits, improving mindset, and achieving long-term success. It shares inspiring stories, practical techniques, and actionable advice for personal growth. A great read for anyone looking to develop confidence, discipline, and better daily habits."
     },
     {
       "id": 24,
       "title": "The Power of Now",
       "author": "Eckhart Tolle",
       "category": "Motivational",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ThePowerofNow.jpg",
-      "description": "The Power of Now by Eckhart Tolle."
+      "description": "This motivational book focuses on building positive habits, improving mindset, and achieving long-term success. It shares inspiring stories, practical techniques, and actionable advice for personal growth. A great read for anyone looking to develop confidence, discipline, and better daily habits."
     },
     {
       "id": 25,
       "title": "Can't Hurt Me",
       "author": "David Goggins",
       "category": "Motivational",
-      "price": 999,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/Can'tHurtMe.jpg",
-      "description": "Can't Hurt Me by David Goggins."
+      "description": "This motivational book focuses on building positive habits, improving mindset, and achieving long-term success. It shares inspiring stories, practical techniques, and actionable advice for personal growth. A great read for anyone looking to develop confidence, discipline, and better daily habits."
     },
     {
       "id": 26,
       "title": "Steve Jobs",
       "author": "Walter Isaacson",
       "category": "Biography",
-      "price": 999,
+      "price": "25 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/SteveJobs.jpg",
-      "description": "Steve Jobs by Walter Isaacson."
+      "description": "This biography tells the inspiring life story of a remarkable personality, highlighting their challenges, achievements, leadership, and impact on the world. Readers gain valuable lessons about perseverance, innovation, and success through real-life experiences. A motivating and insightful read."
     },
     {
       "id": 27,
       "title": "Elon Musk",
       "author": "Walter Isaacson",
       "category": "Biography",
-      "price": 1199,
+      "price": "30 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ElonMusk.jpg",
-      "description": "Elon Musk by Walter Isaacson."
+      "description": "This biography tells the inspiring life story of a remarkable personality, highlighting their challenges, achievements, leadership, and impact on the world. Readers gain valuable lessons about perseverance, innovation, and success through real-life experiences. A motivating and insightful read."
     },
     {
       "id": 28,
       "title": "Becoming",
       "author": "Michelle Obama",
       "category": "Biography",
-      "price": 899,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/Becoming.jpg",
-      "description": "Becoming by Michelle Obama."
+      "description": "This biography tells the inspiring life story of a remarkable personality, highlighting their challenges, achievements, leadership, and impact on the world. Readers gain valuable lessons about perseverance, innovation, and success through real-life experiences. A motivating and insightful read."
     },
     {
       "id": 29,
       "title": "Shoe Dog",
       "author": "Phil Knight",
       "category": "Biography",
-      "price": 799,
+      "price": "20 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/ShoeDog.jpg",
-      "description": "Shoe Dog by Phil Knight."
+      "description": "This biography tells the inspiring life story of a remarkable personality, highlighting their challenges, achievements, leadership, and impact on the world. Readers gain valuable lessons about perseverance, innovation, and success through real-life experiences. A motivating and insightful read."
     },
     {
       "id": 30,
       "title": "The Diary of a Young Girl",
       "author": "Anne Frank",
       "category": "Biography",
-      "price": 499,
+      "price": "10 / Day",
       "rating": 4.8,
       "language": "English",
       "stock": 10,
       "image": "https://raw.githubusercontent.com/MANISHPARAB12/imgforproducts/main/Books/TheDiaryofaYoungGirl.jpg",
-      "description": "The Diary of a Young Girl by Anne Frank."
-    }
+      "description": "This biography tells the inspiring life story of a remarkable personality, highlighting their challenges, achievements, leadership, and impact on the world. Readers gain valuable lessons about perseverance, innovation, and success through real-life experiences. A motivating and insightful read."
+}
   ]
 }

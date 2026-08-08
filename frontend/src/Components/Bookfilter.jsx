@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
+// import "../Css/Filter.css"
 
 export const Filter = () => {
   const [categories, setCategories] = useState([]);
@@ -44,22 +45,24 @@ export const Filter = () => {
     setSearchParams(params);
   }, [selectedCategory, setSearchParams]);
 
-  return (
-    <div className="filter">
-      <h2>Book Categories</h2>
+  return (<div className="filter">
+    <h2>Categories</h2>
 
-      {categories.map((category) => (
-        <div key={category}>
-          <input
-            type="checkbox"
-            name={category}
-            checked={selectedCategory.includes(category)}
-            onChange={handleFilter}
-          />
+    <div className="category-grid">
+        {categories.map((category) => (
+            <div key={category} className="filtercheckbox">
+                <input
+                    type="checkbox"
+                    name={category}
+                    value={category}
+                    checked={selectedCategory.includes(category)}
+                    onChange={handleFilter}
+                />
 
-          <label>{category}</label>
-        </div>
-      ))}
+                <label>{category}</label>
+            </div>
+        ))}
     </div>
+</div>
   );
 };

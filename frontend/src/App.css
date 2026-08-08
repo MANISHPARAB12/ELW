@@ -1,56 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-nav {
-    background-color: #222;
-    padding: 15px 30px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-}
-
-.h2logo {
-    /* color: white; */
-    font-size: 28px;
-    font-weight: bold;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.nav-links:hover {
-    color: #00bfff;
-}
-
-.logo  {
-    text-decoration: none;
-    color: white;
-}
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    height: 89vh;
+    min-height: 89vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
     background: linear-gradient(to bottom, #1f2937, #111827);
-    /* background-color: rgb(204, 204, 204); */
     color: white;
 }
 
@@ -59,7 +18,7 @@ nav ul {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(24px, 10vw, 36px);
     margin-bottom: 20px;
 }
 
@@ -85,109 +44,171 @@ nav ul {
     background-color: #1d4ed8;
 }
 
-
-/* card components css  */
-
-.books-container {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    padding: 20px;
-    gap: 20px;
-    line-height: 2em;
-}
-
-.book-img{
-    height: 300px;
-    align-items: center;
-    width: auto;
-}
-
-.img-container {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-
-}
-
-.card {
-    padding: 20px;
-    background-color:rgb(223, 223, 223);
-    border-radius: 20px;
-}
-
-.load-btn {
-    height: 40px;
-    width: 100px;
-    border-radius: 30px;
-    border: 2px solid black;
-}
-
-.load-btn:hover {
-    /* border: 2px solid white; */
-    border: none;
-}
-
-.book-detail {
-    padding-top: 10px;
-}
-
-/* end */
+/* =========================
+   BOOK SECTION
+========================= */
 
 .book-section {
-    padding: 30px;
+    margin: 20px;
 }
 
-.book-wrapper {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-/* Left Sidebar */
+/* =========================
+   FILTER SIDEBAR
+========================= */
 
 .filter-wrapper {
-    width: 250px;
-    min-width: 250px;
+    flex: 0 0 150px;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     background: #fff;
+    margin-bottom: 10px;
 }
 
-/* Right Side */
+.filter {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.filtercheckbox {
+    margin-top: 6px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* space between checkbox and label */
+    margin-bottom: 6px;
+}
+
+.categorylabel {
+    margin-top: 5px;
+}
+
+.category-grid {
+    display: flex;
+    gap: 30px;
+}
+
+/* =========================
+   BOOKS CONTAINER
+========================= */
 
 .books-wrapper {
     flex: 1;
+    min-width: 0;
 }
-
-/* Books Grid */
 
 .books-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /* Default: 5 cards per row (desktop, >900px) */
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 20px;
+    width: 100%;
 }
 
-/* Card  css start */
+/* =========================
+   CARD
+========================= */
 
 .card {
-    border: 1px solid #ddd;
+    width: 100%;
+    min-width: 0;
+    border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    background-color: rgb(200, 197, 197);
+    height: 350px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
+
+/* =========================
+   BOOK IMAGE
+========================= */
 
 .book-img {
-    width: 180px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
     object-fit: contain;
     display: block;
-    margin: auto;
+    margin: 0 auto 10px;
 }
 
-.card:hover {
-    transform: rotateX('10');
+/* =========================================================
+   MEDIA QUERIES
+   Ordered widest -> narrowest, each range is exclusive so
+   nothing overlaps or gets silently overridden by source order.
+========================================================= */
+
+/* ---- Books grid: 901px+ = 5 cols (default above) ---- */
+
+/* 701px - 900px: 3 cols, cards no longer need fixed height */
+@media (max-width: 900px) {
+    .card {
+        height: auto;
+    }
+    .book-img {
+        height: 150px;
+    }
+    .books-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-/* Card  css end */
+/* 481px - 700px: 2 cols */
+@media (max-width: 700px) {
+    .books-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .book-img {
+        padding: 10px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 542px) {
+    .book-img {
+        /* padding-right: 30px; */
+        height: 150px;
+    }
+}
+
+/* <= 480px: 1 col */
+@media (max-width: 480px) {
+    .books-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ---- Category filter grid ---- */
+
+@media (max-width: 1060px) {
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        gap: 12px 25px;
+    }
+}
+
+@media (max-width: 718px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 497px) {
+    .category-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 383px) {
+    .filter {
+        display: flex;
+        flex-direction: column;
+    }
+}
 

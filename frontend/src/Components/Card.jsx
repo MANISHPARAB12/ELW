@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 export const Card = () => {
   const [books, setBooks] = useState([]);
-  
-
   const [searchParams] = useSearchParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const categories = searchParams.getAll("category");
@@ -24,31 +24,30 @@ export const Card = () => {
     });
   }, [searchParams]);
 
-  
-
   return (
-    <>
-      <div className="books-container">
-        {books.map((book) => (
-          <div className="card" key={book.id}>
-            <img
-              src={book.image}
-              alt={book.title}
-              className="book-img"
-            />
+    <div className="books-container">
 
-            <h3>{book.title}</h3>
+      {books.map((book) => (
+        <div
+        className="card"
+        key={book.id}
+        onClick={() => navigate(`/book/${book.id}`)}
+        >
+          <img
+            src={book.image}
+            alt={book.title}
+            className="book-img"
+          />
 
-            <p>{book.author}</p>
+          <h3>{book.title}</h3>
 
-            <p>{book.category}</p>
+          <p>{book.author}</p>
 
-            <h2>₹{book.price}</h2>
-          </div>
-        ))}
+          <p>{book.category}</p>
+
+          <h4>₹{book.price}</h4>
+        </div>
+      ))}
       </div>
-
-      
-    </>
   );
 };
