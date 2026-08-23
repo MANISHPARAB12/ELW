@@ -25,7 +25,7 @@ export const Card = () => {
   }, [searchParams]);
 
   return (
-    <div className="books-container">
+    <div className="books-container ">
 
       {books.map((book) => (
         <div

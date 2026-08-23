@@ -70,9 +70,9 @@
     flex-direction: row;
     gap: 50px;
 }
-
+ 
 .filtercheckbox {
-    margin-top: 6px;
+    margin-top: 2px;
 }
 
 .checkbox {
