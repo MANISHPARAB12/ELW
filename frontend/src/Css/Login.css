@@ -84,6 +84,13 @@ body {
   transform: scale(0.98);
 }
 
+.signup {
+  h3 {
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+
 @media (max-width: 480px) {
   .form {
     width: 90%;

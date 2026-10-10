@@ -1,0 +1,98 @@
+
+.myborrow-container {
+  min-height: 70vh;
+  padding: 40px 6%;
+  background: #f3f6fb;
+}
+
+.myborrow-container > h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #202938;
+}
+
+.borrow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.borrow-card {
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dce3ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 5%);
+}
+
+.borrow-book-image {
+  width: 110px;
+  height: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.borrow-book-details {
+  min-width: 0;
+}
+
+.borrow-book-details h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.borrow-book-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.return-book-btn,
+.browse-books-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  color: #fff;
+  background: #2455db;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.return-book-btn:hover,
+.browse-books-btn:hover {
+  background: #183fb0;
+}
+
+.empty-borrows {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+}
+
+.myborrow-error {
+  margin: 20px 0;
+  color: #c62828;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .myborrow-container {
+    padding: 24px 14px;
+  }
+
+  .borrow-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .borrow-book-image {
+    width: 85px;
+    height: 125px;
+  }
+}

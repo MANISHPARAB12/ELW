@@ -1,68 +1,137 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
-// import "../Css/Filter.css"
-
+const API_URL = import.meta.env.VITE_Book_URL;
+ 
 export const Filter = () => {
   const [categories, setCategories] = useState([]);
+
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [selectedCategory, setSelectedCategory] = useState(
-    searchParams.getAll("category") || []
+  const [search, setSearch] = useState(
+    searchParams.get("search") || ""
   );
 
-  useEffect(() => {
-    axios.get("http://localhost:4000/books").then((res) => {
-      const uniqueCategory = [
-        ...new Set(res.data.map((book) => book.category)),
-      ];
+  const [selectedCategory, setSelectedCategory] = useState(
+    searchParams.getAll("category")
+  );
 
-      setCategories(uniqueCategory);
-    });
+  // =========================
+  // GET CATEGORIES
+  // =========================
+  useEffect(() => {
+    axios
+      .get(`${API_URL}/books`)
+      .then((res) => {
+        const uniqueCategory = [
+          ...new Set(
+            res.data.map((book) => book.category)
+          ),
+        ];
+
+        setCategories(uniqueCategory);
+      })
+      .catch((error) => {
+        console.log("Category Error:", error);
+      });
   }, []);
 
+  // =========================
+  // CATEGORY FILTER
+  // =========================
   const handleFilter = (e) => {
-    const { name } = e.target;
+    const category = e.target.name;
 
-    let newCategory = [...selectedCategory];
+    setSelectedCategory((prev) => {
+      if (prev.includes(category)) {
+        return prev.filter(
+          (item) => item !== category
+        );
+      }
 
-    if (newCategory.includes(name)) {
-      newCategory = newCategory.filter((item) => item !== name);
-    } else {
-      newCategory.push(name);
-    }
-
-    setSelectedCategory(newCategory);
+      return [...prev, category];
+    });
   };
 
-  useEffect(() => {
-    const params = {};
+  // =========================
+  // SEARCH
+  // =========================
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
 
-    if (selectedCategory.length > 0) {
-      params.category = selectedCategory;
+  // =========================
+  // UPDATE URL
+  // =========================
+  useEffect(() => {
+    const params = new URLSearchParams();
+
+    // Search
+    if (search.trim() !== "") {
+      params.set("search", search);
     }
 
+    // Categories
+    selectedCategory.forEach((category) => {
+      params.append("category", category);
+    });
+
     setSearchParams(params);
-  }, [selectedCategory, setSearchParams]);
+  }, [
+    search,
+    selectedCategory,
+    setSearchParams,
+  ]);
 
-  return (<div className="filter">
-    <h2>Categories</h2>
+  return (
+    <div className="filter">
 
-    <div className="category-grid">
-        {categories.map((category) => (
-            <div key={category} className="filtercheckbox">
-                <input
-                    type="checkbox"
-                    name={category}
-                    value={category}
-                    checked={selectedCategory.includes(category)}
-                    onChange={handleFilter}
-                />
+      {/* SEARCH */}
+      <div className="search-section">
 
-                <label>{category}</label>
+        <h2>Search Books</h2>
+
+        <input
+          type="text"
+          placeholder="Search book..."
+          value={search}
+          onChange={handleSearch}
+        />
+
+      </div>
+
+      {/* CATEGORIES */}
+      <div className="category-section">
+
+        <h2>Categories</h2>
+
+        <div className="category-grid">
+
+          {categories.map((category) => (
+            <div
+              key={category}
+              className="filtercheckbox"
+            >
+
+              <input
+                type="checkbox"
+                name={category}
+                value={category}
+                checked={selectedCategory.includes(
+                  category
+                )}
+                onChange={handleFilter}
+              />
+
+              <label>{category}</label>
+
             </div>
-        ))}
+          ))}
+
+        </div>
+
+      </div>
+
     </div>
-</div>
   );
 };
