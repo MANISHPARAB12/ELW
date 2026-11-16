@@ -10,7 +10,7 @@ export const Home = () => {
         <div className="hero-content">
           <h1>Discover Your Next Favorite Book</h1>
 
-          <p>
+          <p className="text-white font-semibold">
             Welcome to ELW, your digital library where you can explore
             thousands of books, borrow them online, and enjoy reading anytime,
             anywhere.

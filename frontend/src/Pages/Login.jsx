@@ -9,6 +9,8 @@ export const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -40,21 +42,20 @@ export const Login = () => {
         password: form.password,
       });
 
-      // Your backend must return a JWT in data.token.
       if (!data?.token) {
         setError("Login response did not contain an authentication token.");
         return;
       }
 
-      // Save the token for authenticated API requests.
       localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
 
-      // Navigate back to the page the user wanted to access.
+      window.dispatchEvent(new Event("authChanged"));
+
       const destination = location.state?.from || "/Home";
 
-      navigate(destination, {
-        replace: true,
-      });
+      navigate(destination, { replace: true });
+
     } catch (err) {
       setError(getApiError(err));
     } finally {
@@ -65,12 +66,14 @@ export const Login = () => {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
+
         {location.state?.message && (
           <p role="status">{location.state.message}</p>
         )}
 
         <div className="input-group">
           <label htmlFor="login-email">Email</label>
+
           <input
             id="login-email"
             name="email"
@@ -84,15 +87,28 @@ export const Login = () => {
 
         <div className="input-group">
           <label htmlFor="login-password">Password</label>
-          <input
-            id="login-password"
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            autoComplete="current-password"
-            required
-          />
+
+          <div className="password-wrapper">
+            <input
+              id="login-password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              value={form.password}
+              onChange={handleChange}
+              autoComplete="current-password"
+              required
+            />
+
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setShowPassword((prev) => !prev)}
+              aria-label={showPassword ? "Hide password" : "Show password"}
+              aria-pressed={showPassword}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
         </div>
 
         {error && <p role="alert">{error}</p>}
@@ -109,6 +125,7 @@ export const Login = () => {
             </Link>
           </h3>
         </div>
+
       </form>
     </div>
   );

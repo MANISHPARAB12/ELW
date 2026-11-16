@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Css/Login.css";
-import { loginUser, registerUser } from "../Services/AuthService";
+import { registerUser } from "../Services/AuthService";
 import { getApiError } from "../Api/apiError";
 
 export const Signup = () => {
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -41,10 +43,12 @@ export const Signup = () => {
         password: form.password,
       });
 
-      // Registration succeeded; navigate to login.
       navigate("/Login", {
-        state: { message: data.msg || "Registration successful." },
+        state: {
+          message: data.msg || "Registration successful.",
+        },
       });
+
     } catch (err) {
       setError(getApiError(err));
     } finally {
@@ -55,8 +59,10 @@ export const Signup = () => {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
+
         <div className="input-group">
           <label htmlFor="name">Name</label>
+
           <input
             id="name"
             name="name"
@@ -70,6 +76,7 @@ export const Signup = () => {
 
         <div className="input-group">
           <label htmlFor="signup-email">Email</label>
+
           <input
             id="signup-email"
             name="email"
@@ -83,16 +90,29 @@ export const Signup = () => {
 
         <div className="input-group">
           <label htmlFor="signup-password">Password</label>
-          <input
-            id="signup-password"
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            autoComplete="new-password"
-            minLength={8}
-            required
-          />
+
+          <div className="password-wrapper">
+            <input
+              id="signup-password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              value={form.password}
+              onChange={handleChange}
+              autoComplete="new-password"
+              minLength={8}
+              required
+            />
+
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={() => setShowPassword((prev) => !prev)}
+              aria-label={showPassword ? "Hide password" : "Show password"}
+              aria-pressed={showPassword}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
         </div>
 
         {error && <p role="alert">{error}</p>}
@@ -109,6 +129,7 @@ export const Signup = () => {
             </Link>
           </h3>
         </div>
+
       </form>
     </div>
   );

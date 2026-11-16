@@ -2,6 +2,7 @@
 const mongoose = require("mongoose");
 const Borrow = require("../models/borrow.models");
 const Book = require("../models/book.models");
+const User = require("../models/user.models");
 
 // Borrow a book
 const borrowBook = async (req, res) => {
@@ -23,6 +24,17 @@ const borrowBook = async (req, res) => {
       });
     }
 
+    // Find user
+    const user = await User.findById(userId).select("name");
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found.",
+      });
+    }
+
+    // Find book
     const book = await Book.findById(bookId);
 
     if (!book) {
@@ -32,6 +44,7 @@ const borrowBook = async (req, res) => {
       });
     }
 
+    // Check existing borrowing
     const existingBorrow = await Borrow.findOne({
       userId,
       bookId,
@@ -49,8 +62,10 @@ const borrowBook = async (req, res) => {
     const dueDate = new Date(borrowedAt);
     dueDate.setDate(dueDate.getDate() + 14);
 
+    // Create borrowing record
     const borrow = await Borrow.create({
       userId,
+      name: user.name,
       bookId,
       borrowedAt,
       dueDate,
@@ -61,6 +76,7 @@ const borrowBook = async (req, res) => {
       message: "Book borrowed successfully.",
       borrow,
     });
+
   } catch (error) {
     console.error("Borrow book error:", error);
 
@@ -71,7 +87,7 @@ const borrowBook = async (req, res) => {
   }
 };
 
-// Get the logged-in user's borrowing history
+// Get logged-in user's borrowing history
 const getMyBorrows = async (req, res) => {
   try {
     const userId = req.user?.id || req.user?._id;
@@ -92,6 +108,7 @@ const getMyBorrows = async (req, res) => {
       count: borrows.length,
       borrows,
     });
+
   } catch (error) {
     console.error("Get borrowing history error:", error);
 
@@ -152,6 +169,7 @@ const returnBook = async (req, res) => {
       message: "Book returned successfully.",
       borrow,
     });
+
   } catch (error) {
     console.error("Return book error:", error);
 

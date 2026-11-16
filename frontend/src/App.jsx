@@ -1,30 +1,38 @@
-import { BrowserRouter, Routes, Route , Navigate} from "react-router-dom";
 
-import {Navbar} from './Components/Navbar'
-import {ProductDetails} from "./Components/ProductDetails"
-import { Card } from "./Components/Card";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Navbar } from "./Components/Navbar";
+import { PrivateRoute } from "./Components/PrivateRoute";
 
 import { Home } from "./Pages/Home";
-import { MyBorrow } from "./Pages/MyBorrow";
 import { Login } from "./Pages/Login";
 import { Signup } from "./Pages/Signup";
-import { Contact } from "./Pages/Contact";
+import { ProductDetails } from "./Components/ProductDetails";
+import { MyBorrow } from "./Pages/MyBorrow";
 
-export const  App = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/MyBorrow" element={<MyBorrow />} />
+        {/* Public Routes */}
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
-        <Route path="/Contact" element={<Contact />} />
 
-        <Route path="/" element={<Card />} />
-        <Route path="/book/:id" element={<ProductDetails />} />
+        {/* Protected Routes */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/MyBorrow" element={<MyBorrow />} />
+
+          {/* Book Details */}
+          <Route
+            path="/book/:id"
+            element={<ProductDetails />}
+          />
+        </Route>
+
+        <Route path="*" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

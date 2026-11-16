@@ -96,6 +96,7 @@ export const Filter = () => {
           placeholder="Search book..."
           value={search}
           onChange={handleSearch}
+          className="w-full border-2 rounded-lg !p-1"
         />
 
       </div>
